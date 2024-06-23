@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Generator</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 40vh;
+            margin: 0;
+        }
+        .content {
+            flex: 1;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+        .fortune-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 2px auto;
+            width: 50%;
+            text-align: center;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <nav >
+            <div class="img">
+                <img src="img/12.jpg" alt="">
+            </div>
+            <div class="menu">
+                <a href="#"> HOME</a>
+                <a href="c1.html"> CURRENCY EXCHANGE</a>
+              <a href="r2.html">QUIZE </a>
+                
+            </div>
+
+        </nav>
+        </div>
+    </header>
+    <div class="content">
+        
+    </div>
+    <div class="fortune-box" id="fortune-box"></div>
+    
+      
+    </div>
+
+    <script>
+        const fortunes = [
+            "You will have a great day!",
+            "A surprise is waiting for you.",
+            "Success is in your future.",
+            "Expect the unexpected.",
+            "Good news will come to you by mail.",
+            "You will meet someone special soon.",
+            "Happiness is around the corner.",
+            "Your hard work will soon pay off.",
+            "An exciting opportunity lies ahead of you.",
+            "You will achieve your goals."
+        ];
+
+        function displayRandomFortune() {
+            const randomIndex = Math.floor(Math.random() * fortunes.length);
+            const fortuneBox = document.getElementById('fortune-box');
+            fortuneBox.textContent = fortunes[randomIndex];
+        }
+
+       
+        window.onload = displayRandomFortune;
+    </script>
+</body>
+</html>
